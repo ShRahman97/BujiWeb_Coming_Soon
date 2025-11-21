@@ -6,11 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
+<!--
+  ========================================
+  BUJI WEBSITE - IMAGE REFERENCE GUIDE
+  ========================================
+  
+  This website uses the following images:
+  
+  1. LOGO (Header)
+     - 5f4305a5ccd7c475b0cad1e55fda2059085d57b0.png
+     - Location: Top left header
+     - Recommended: Transparent PNG logo
+  
+  2. CAROUSEL IMAGES (Hero Section - 4 images)
+     - 030fbd95fcca77224266bdb5925578f853815c2a.jpg (Card 1)
+     - 62a4c09b263eb1caff9763557dc7b19cbb4b0bf2.jpg (Card 2)
+     - 82d29675aa9f973fc77372227f05ad54dde64adf.jpg (Card 3)
+     - cecb6e5f948bf98983e71fde47392a7734073f5d.jpg (Card 4)
+     - Location: Auto-scrolling carousel below hero text
+     - Recommended: Portrait orientation (280x380px optimal)
+  
+  3. FEATURE CARDS ("We plan it all" Section - 4 images)
+     - 49c9ff2259ca2c1950c316bd9936571d17b8f2ff.jpg (Feature 1)
+     - 06126ef4d1dfd2ee85f2787e74420e95702a8387.jpg (Feature 2)
+     - 3522f13344a075f1c5a8aebc30a1f3a8c35086ad.jpg (Feature 3)
+     - 5ada316cf2e75531ed8f98fd1d835bd91e120e9f.jpg (Feature 4)
+     - Location: Small cards stacked vertically on right side
+     - Recommended: Square or landscape (80x80px displayed)
+  
+  4. TREATMENT HERO IMAGE ("Confidence, curated" Section)
+     - c494310937b5ae7f22f1c8210fb29eff7fa7ad12.png
+     - Location: Large card in treatments section
+     - Recommended: Landscape (600x240px optimal)
+  
+  5. VALUE SECTION IMAGE ("World-class care" Section)
+     - c6faf8a3cd37becffd3e008c02a09e0b22c5f0aa.png
+     - Location: Left side of pricing comparison
+     - Recommended: Portrait/square (500x600px optimal)
+  
+  6. CTA BACKGROUND IMAGE (Final Section)
+     - fc37e4bfc0fa5dd1b2d376e2aad220c6eac5d3f6.png
+     - Location: Full-width background in final CTA section
+     - Recommended: Wide landscape (1920x500px optimal)
+     - Note: Displays with 30% opacity and dark overlay
+  
+  ========================================
+-->
 <body>
   <!-- Top Navigation -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
+        <!-- LOGO IMAGE: This should be your Buji logo (transparent PNG recommended) -->
+        <!-- Current: 5f4305a5ccd7c475b0cad1e55fda2059085d57b0.png -->
         <img src="5f4305a5ccd7c475b0cad1e55fda2059085d57b0.png" alt="Buji Logo" class="logo-image" />
       </a>
     </div>
@@ -29,22 +77,34 @@
         </div>
       </div>
 
-      <!-- Carousel -->
+      <!-- CAROUSEL SECTION: Auto-scrolling carousel of patient/treatment images -->
+      <!-- These images appear in the horizontal scrolling cards below the hero section -->
       <div class="carousel-container">
         <div class="carousel-wrapper">
           <div class="carousel-track" id="carouselTrack">
+            <!-- CAROUSEL IMAGE 1: First card in carousel - Portrait orientation recommended (280x380px optimal) -->
+            <!-- Current: 030fbd95fcca77224266bdb5925578f853815c2a.jpg -->
             <article class="carousel-card">
               <img src="030fbd95fcca77224266bdb5925578f853815c2a.jpg" alt="Patient 1" />
               <div class="carousel-card-label">@bujicare</div>
             </article>
+            
+            <!-- CAROUSEL IMAGE 2: Second card in carousel - Portrait orientation recommended (280x380px optimal) -->
+            <!-- Current: 62a4c09b263eb1caff9763557dc7b19cbb4b0bf2.jpg -->
             <article class="carousel-card">
               <img src="62a4c09b263eb1caff9763557dc7b19cbb4b0bf2.jpg" alt="Patient 2" />
               <div class="carousel-card-label">@bujicare</div>
             </article>
+            
+            <!-- CAROUSEL IMAGE 3: Third card in carousel - Portrait orientation recommended (280x380px optimal) -->
+            <!-- Current: 82d29675aa9f973fc77372227f05ad54dde64adf.jpg -->
             <article class="carousel-card">
               <img src="82d29675aa9f973fc77372227f05ad54dde64adf.jpg" alt="Patient 3" />
               <div class="carousel-card-label">@bujicare</div>
             </article>
+            
+            <!-- CAROUSEL IMAGE 4: Fourth card in carousel - Portrait orientation recommended (280x380px optimal) -->
+            <!-- Current: cecb6e5f948bf98983e71fde47392a7734073f5d.jpg -->
             <article class="carousel-card">
               <img src="cecb6e5f948bf98983e71fde47392a7734073f5d.jpg" alt="Patient 4" />
               <div class="carousel-card-label">@bujicare</div>
@@ -62,7 +122,12 @@
           <a href="#" class="btn btn-dark">See how it works</a>
         </div>
 
+        <!-- FEATURE CARDS: 4 small image cards stacked vertically on the right side -->
+        <!-- These appear in the "We plan it all so you can focus on you" section -->
         <div class="planning-stack">
+          <!-- FEATURE IMAGE 1: Top feature card - Small square/landscape image (80x80px displayed) -->
+          <!-- Current: 49c9ff2259ca2c1950c316bd9936571d17b8f2ff.jpg -->
+          <!-- Suggested content: Image representing innovative treatments or medical technology -->
           <article class="feature-card">
             <img src="49c9ff2259ca2c1950c316bd9936571d17b8f2ff.jpg" alt="Innovative treatments" />
             <div class="feature-card-content">
@@ -71,6 +136,9 @@
             </div>
           </article>
 
+          <!-- FEATURE IMAGE 2: Second feature card - Small square/landscape image (80x80px displayed) -->
+          <!-- Current: 06126ef4d1dfd2ee85f2787e74420e95702a8387.jpg -->
+          <!-- Suggested content: Image representing personalized support or consultation -->
           <article class="feature-card">
             <img src="06126ef4d1dfd2ee85f2787e74420e95702a8387.jpg" alt="Personalised support" />
             <div class="feature-card-content">
@@ -79,6 +147,9 @@
             </div>
           </article>
 
+          <!-- FEATURE IMAGE 3: Third feature card - Small square/landscape image (80x80px displayed) -->
+          <!-- Current: 3522f13344a075f1c5a8aebc30a1f3a8c35086ad.jpg -->
+          <!-- Suggested content: Image representing comprehensive care or travel planning -->
           <article class="feature-card">
             <img src="3522f13344a075f1c5a8aebc30a1f3a8c35086ad.jpg" alt="Everything covered" />
             <div class="feature-card-content">
@@ -87,6 +158,9 @@
             </div>
           </article>
 
+          <!-- FEATURE IMAGE 4: Fourth (bottom) feature card - Small square/landscape image (80x80px displayed) -->
+          <!-- Current: 5ada316cf2e75531ed8f98fd1d835bd91e120e9f.jpg -->
+          <!-- Suggested content: Image representing safety, security, or trusted care -->
           <article class="feature-card">
             <img src="5ada316cf2e75531ed8f98fd1d835bd91e120e9f.jpg" alt="Safe journeys" />
             <div class="feature-card-content">
@@ -109,7 +183,11 @@
         </header>
 
         <div class="treatments-grid">
+          <!-- MAIN TREATMENT CARD: Large card on the left side of "Confidence, curated" section -->
           <article class="treatment-card treatment-card-main">
+            <!-- TREATMENT HERO IMAGE: Large landscape image for hair transplant service (600x240px optimal) -->
+            <!-- Current: c494310937b5ae7f22f1c8210fb29eff7fa7ad12.png -->
+            <!-- Suggested content: Professional hair transplant result or clinic environment -->
             <div class="treatment-image">
               <img src="c494310937b5ae7f22f1c8210fb29eff7fa7ad12.png" alt="Hair Transplants" />
             </div>
@@ -126,6 +204,8 @@
             </div>
           </article>
 
+          <!-- SECONDARY TREATMENT CARDS: Smaller cards on the right side -->
+          <!-- These cards don't have images - they're text-only -->
           <article class="treatment-card treatment-card-secondary">
             <h3>Dental implant & veneers</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
@@ -141,9 +221,12 @@
       </div>
     </section>
 
-    <!-- PRICING / VALUE -->
+    <!-- PRICING / VALUE SECTION: "World-class care. Without the London price tag." -->
     <section class="section section-contrast" id="value">
       <div class="container value-inner">
+        <!-- VALUE HERO IMAGE: Large portrait/square image on the left side -->
+        <!-- Current: c6faf8a3cd37becffd3e008c02a09e0b22c5f0aa.png -->
+        <!-- Suggested content: Happy patient or confident person post-treatment (500x600px optimal) -->
         <div class="value-image">
           <img src="c6faf8a3cd37becffd3e008c02a09e0b22c5f0aa.png" alt="Person smiling confidently" />
         </div>
@@ -224,8 +307,13 @@
       </div>
     </section>
 
-    <!-- MOBILE APP / CTA BANNER -->
+    <!-- FINAL CTA SECTION: Full-width banner with background image -->
+    <!-- "We're reimagining global healthcare access starting with elective care." -->
     <section class="section section-app" id="contact">
+      <!-- CTA BACKGROUND IMAGE: Full-width background image for final section -->
+      <!-- Current: fc37e4bfc0fa5dd1b2d376e2aad220c6eac5d3f6.png -->
+      <!-- Suggested content: Atmospheric image - person with phone, medical/travel theme (1920x500px optimal) -->
+      <!-- Note: Image will be slightly transparent (30% opacity) with dark green overlay -->
       <div class="app-background">
         <img src="fc37e4bfc0fa5dd1b2d376e2aad220c6eac5d3f6.png" alt="Background" />
       </div>
