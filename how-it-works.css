@@ -376,3 +376,56 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Hero with text over image */
+.how-it-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 520px; /* tweak to taste */
+  overflow: hidden;
+}
+
+.how-it-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.how-it-hero-text {
+  position: absolute;
+  bottom: 80px;  /* move text up/down */
+  left: 0;
+  right: 0;
+  max-width: 600px;
+  color: #ffffff;
+}
+
+.how-it-hero-text h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.how-it-hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Step 1 overlap */
+.step-item[data-step="1"] {
+  margin-top: -180px;  /* pulls step 1 up over hero image */
+  position: relative;
+  z-index: 5;
+}
+
+/* keep right-hand text OFF the image */
+.step-item[data-step="1"] .step-right {
+  padding-top: 200px; /* pushes text down */
+}
+
+/* ensure left image stack is above hero */
+.step-item[data-step="1"] .step-left {
+  z-index: 10;
+}
