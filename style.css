@@ -515,33 +515,31 @@ body {
   background-position: center;
 }
 
+/* Base pill */
 .badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 8px;           /* tighter horizontally */
+  display: inline-block;
+  padding: 4px 10px;      /* small, tight pill */
   font-size: 10px;
   font-weight: 600;
   border-radius: 999px;
   background: var(--accent);
   color: #ffffff;
-  letter-spacing: 0;          /* no extra spacing */
-  white-space: nowrap;        /* keeps text on one line */
+  white-space: nowrap;
 }
 
-/* Lime variant (Coming Soon / Now Available) */
+/* Lime pill (for "Now available") */
 .badge-lime {
   background: #CBE898;
   color: #1a5632;
 }
 
+/* "Coming Soon" – lime text, no pill background */
 .badge-coming-soon {
   background: transparent;
+  color: #CBE898;   /* lime green text */
   padding: 0;
   border-radius: 0;
-  color: inherit;      /* optionally match surrounding text colour */
-  font-weight: 600;    /* keep it a bit bold */
 }
-
 
 .link-arrow {
   font-size: 14px;
