@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         steps[currentStep].classList.add('active');
         isTransitioning = false;
-      }, 400);
+      }, 200);
     }
   }
 
