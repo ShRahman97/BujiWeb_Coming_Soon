@@ -128,7 +128,7 @@
 
 .step-item[data-step="1"] .floating-2 {
   top: 20%;
-  right: 20px;
+  right: 150px;
   max-width: 100px;
   transform: rotate(8deg);
 }
