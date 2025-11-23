@@ -534,6 +534,14 @@ body {
   color: #1a5632;
 }
 
+.badge-coming-soon {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;      /* optionally match surrounding text colour */
+  font-weight: 600;    /* keep it a bit bold */
+}
+
 
 .link-arrow {
   font-size: 14px;
