@@ -6,59 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<!--
-  ========================================
-  BUJI WEBSITE - IMAGE REFERENCE GUIDE
-  ========================================
-  
-  This website uses the following images:
-  
-  1. LOGO (Header)
-     - 1_logo.png
-     - Location: Top left header
-     - Recommended: Transparent PNG logo
-  
-  2. CAROUSEL IMAGES (Hero Section - 4 images)
-     - 030fbd95fcca77224266bdb5925578f853815c2a.jpg (Card 1)
-     - 62a4c09b263eb1caff9763557dc7b19cbb4b0bf2.jpg (Card 2)
-     - 82d29675aa9f973fc77372227f05ad54dde64adf.jpg (Card 3)
-     - cecb6e5f948bf98983e71fde47392a7734073f5d.jpg (Card 4)
-     - Location: Auto-scrolling carousel below hero text
-     - Recommended: Portrait orientation (280x380px optimal)
-  
-  3. FEATURE CARDS ("We plan it all" Section - 4 images)
-     - 49c9ff2259ca2c1950c316bd9936571d17b8f2ff.jpg (Feature 1)
-     - 06126ef4d1dfd2ee85f2787e74420e95702a8387.jpg (Feature 2)
-     - 3522f13344a075f1c5a8aebc30a1f3a8c35086ad.jpg (Feature 3)
-     - 5ada316cf2e75531ed8f98fd1d835bd91e120e9f.jpg (Feature 4)
-     - Location: Small cards stacked vertically on right side
-     - Recommended: Square or landscape (80x80px displayed)
-  
-  4. TREATMENT HERO IMAGE ("Confidence, curated" Section)
-     - c494310937b5ae7f22f1c8210fb29eff7fa7ad12.png
-     - Location: Large card in treatments section
-     - Recommended: Landscape (600x240px optimal)
-  
-  5. VALUE SECTION IMAGE ("World-class care" Section)
-     - c6faf8a3cd37becffd3e008c02a09e0b22c5f0aa.png
-     - Location: Left side of pricing comparison
-     - Recommended: Portrait/square (500x600px optimal)
-  
-  6. CTA BACKGROUND IMAGE (Final Section)
-     - fc37e4bfc0fa5dd1b2d376e2aad220c6eac5d3f6.png
-     - Location: Full-width background in final CTA section
-     - Recommended: Wide landscape (1920x500px optimal)
-     - Note: Displays with 30% opacity and dark overlay
-  
-  ========================================
--->
+
 <body>
   <!-- Top Navigation -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <!-- LOGO IMAGE: This should be your Buji logo (transparent PNG recommended) -->
-        <!-- Current: 5f4305a5ccd7c475b0cad1e55fda2059085d57b0.png -->
         <img src="1_logo.png" alt="Buji Logo" class="logo-image" />
       </a>
     </div>
@@ -69,29 +22,31 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <div class="hero-badge">Concierge-led medical travel</div>
+
+          <!-- <div class="hero-badge">Concierge-led medical travel</div> -->
+
           <h1>World-class hair transplants abroad</h1>
+
           <p class="hero-subtitle">
             End-to-end trips curated by UK clinicians, vetted surgeons, and a 24/7 human team that travels
             with you every step of the way.
           </p>
+
+          <!-- HERO POINTS REMOVED -->
           <ul class="hero-points">
-            <li>Pre-ops and eligibility checks led by UK GPs</li>
+            <!-- <li>Pre-ops and eligibility checks led by UK GPs</li>
             <li>5★ hotels, private transfers, and aftercare included</li>
-            <li>Dedicated concierge before, during, and after treatment</li>
+            <li>Dedicated concierge before, during, and after treatment</li> -->
           </ul>
-          <div class="hero-actions">
-            <a href="#" class="btn btn-primary">Download the Buji App</a>
-            <a href="how-it-works.html" class="btn btn-outline">See how it works</a>
-          </div>
-          <p class="hero-footnote">No spam. Just a curated plan that fits your calendar.</p>
-        </div>
-        <div class="hero-visual">
+
+          <!-- MOVED METRICS TILE -->
           <div class="hero-metric-card">
             <p class="metric-label">Trips arranged</p>
             <p class="metric-value">3,500+</p>
             <p class="metric-detail">door-to-door journeys with clinic, travel, and recovery handled.</p>
+
             <div class="metric-divider"></div>
+
             <div class="metric-pair">
               <div>
                 <p class="metric-small-label">Average savings</p>
@@ -103,37 +58,42 @@
               </div>
             </div>
           </div>
+
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary">Download the Buji App</a>
+            <a href="how-it-works.html" class="btn btn-outline">See how it works</a>
+          </div>
+
+          <p class="hero-footnote">No spam. Just a curated plan that fits your calendar.</p>
         </div>
+
+        <!-- REMOVED OLD RIGHT-SIDE METRIC TILE -->
+        <!--
+        <div class="hero-visual">
+          <div class="hero-metric-card">...</div>
+        </div>
+        -->
       </div>
 
-      <!-- CAROUSEL SECTION: Auto-scrolling carousel of patient/treatment images -->
-      <!-- These images appear in the horizontal scrolling cards below the hero section -->
+      <!-- CAROUSEL SECTION -->
       <div class="carousel-container">
         <div class="carousel-wrapper">
           <div class="carousel-track" id="carouselTrack">
-            <!-- CAROUSEL IMAGE 1: First card in carousel -->
-            <!-- Current: c494310937b5ae7f22f1c8210fb29eff7fa7ad12.png -->
             <article class="carousel-card">
               <img src="c494310937b5ae7f22f1c8210fb29eff7fa7ad12.png" alt="Patient 1" />
               <div class="carousel-card-label">@bujicare</div>
             </article>
-            
-            <!-- CAROUSEL IMAGE 2: Second card in carousel - More vertical aspect ratio for centered subject -->
-            <!-- Current: 49c9ff2259ca2c1950c316bd9936571d17b8f2ff.jpg -->
+
             <article class="carousel-card carousel-card-vertical">
               <img src="49c9ff2259ca2c1950c316bd9936571d17b8f2ff.jpg" alt="Patient 2" />
               <div class="carousel-card-label">@bujicare</div>
             </article>
-            
-            <!-- CAROUSEL IMAGE 3: Third card in carousel -->
-            <!-- Current: fc37e4bfc0fa5dd1b2d376e2aad220c6eac5d3f6.png -->
+
             <article class="carousel-card">
               <img src="fc37e4bfc0fa5dd1b2d376e2aad220c6eac5d3f6.png" alt="Patient 3" />
               <div class="carousel-card-label">@bujicare</div>
             </article>
-            
-            <!-- CAROUSEL IMAGE 4: Fourth card in carousel - More vertical aspect ratio for centered subject -->
-            <!-- Current: 030fbd95fcca77224266bdb5925578f853815c2a.jpg -->
+
             <article class="carousel-card carousel-card-vertical">
               <img src="030fbd95fcca77224266bdb5925578f853815c2a.jpg" alt="Patient 4" />
               <div class="carousel-card-label">@bujicare</div>
@@ -151,11 +111,7 @@
           <a href="how-it-works.html" class="btn btn-dark">See how it works</a>
         </div>
 
-        <!-- FEATURE CARDS: 4 small image cards stacked vertically on the right side -->
-        <!-- These appear in the "We plan it all so you can focus on you" section -->
         <div class="planning-stack">
-          <!-- FEATURE IMAGE 1: Top feature card - Small square/landscape image (80x80px displayed) -->
-          <!-- Current: 82d29675aa9f973fc77372227f05ad54dde64adf.jpg -->
           <article class="feature-card">
             <img src="82d29675aa9f973fc77372227f05ad54dde64adf.jpg" alt="Innovative treatments" />
             <div class="feature-card-content">
@@ -164,8 +120,6 @@
             </div>
           </article>
 
-          <!-- FEATURE IMAGE 2: Second feature card - Small square/landscape image (80x80px displayed) -->
-          <!-- Current: c6faf8a3cd37becffd3e008c02a09e0b22c5f0aa.png -->
           <article class="feature-card">
             <img src="c6faf8a3cd37becffd3e008c02a09e0b22c5f0aa.png" alt="Personalised support" />
             <div class="feature-card-content">
@@ -174,8 +128,6 @@
             </div>
           </article>
 
-          <!-- FEATURE IMAGE 3: Third feature card - Small square/landscape image (80x80px displayed) -->
-          <!-- Current: 5f4305a5ccd7c475b0cad1e55fda2059085d57b0.png -->
           <article class="feature-card">
             <img src="5f4305a5ccd7c475b0cad1e55fda2059085d57b0.png" alt="Everything covered" />
             <div class="feature-card-content">
@@ -184,8 +136,6 @@
             </div>
           </article>
 
-          <!-- FEATURE IMAGE 4: Fourth (bottom) feature card - Small square/landscape image (80x80px displayed) -->
-          <!-- Current: 3522f13344a075f1c5a8aebc30a1f3a8c35086ad.jpg -->
           <article class="feature-card">
             <img src="3522f13344a075f1c5a8aebc30a1f3a8c35086ad.jpg" alt="Safe journeys" />
             <div class="feature-card-content">
@@ -200,6 +150,7 @@
     <!-- CONFIDENCE / TREATMENTS -->
     <section class="section section-pale" id="treatments">
       <div class="container treatments-inner">
+
         <header class="section-header section-header-split">
           <h2>Confidence, curated.</h2>
           <p>
@@ -208,9 +159,6 @@
         </header>
 
         <div class="treatments-grid">
-          <!-- MAIN TREATMENT CARD: Large card on the left side of "Confidence, curated" section -->
-          <!-- Hair Transplants - Full square image with text overlayed on left -->
-          <!-- Current: 5ada316cf2e75531ed8f98fd1d835bd91e120e9f.jpg -->
           <article class="treatment-card treatment-card-main treatment-card-with-overlay">
             <div class="treatment-image">
               <img src="5ada316cf2e75531ed8f98fd1d835bd91e120e9f.jpg" alt="Hair Transplants" />
@@ -228,21 +176,17 @@
             </div>
           </article>
 
-          <!-- SECONDARY TREATMENT CARD 1: Dental Implants - Cropped image with text overlayed on left -->
-          <!-- Current: cecb6e5f948bf98983e71fde47392a7734073f5d.jpg -->
           <article class="treatment-card treatment-card-secondary treatment-card-with-overlay">
             <div class="treatment-image treatment-image-cropped treatment-image-dental">
               <img src="cecb6e5f948bf98983e71fde47392a7734073f5d.jpg" alt="Dental Implants" />
             </div>
             <div class="treatment-content treatment-content-overlay">
               <p class="badge badge-lime badge-coming-soon">Coming Soon</p>
-              <h3>Dental Implants Veneers</h3>
+              <h3>Dental Implants & Veneers</h3>
               <p>Smile design meets digital precision. Zirconia implants with sunlit recovery.</p>
             </div>
           </article>
 
-          <!-- SECONDARY TREATMENT CARD 2: Rhinoplasty - Cropped image with text overlayed on left -->
-          <!-- Current: 06126ef4d1dfd2ee85f2787e74420e95702a8387.jpg -->
           <article class="treatment-card treatment-card-secondary treatment-card-with-overlay">
             <div class="treatment-image treatment-image-cropped">
               <img src="06126ef4d1dfd2ee85f2787e74420e95702a8387.jpg" alt="Rhinoplasty" />
@@ -250,29 +194,24 @@
             <div class="treatment-content treatment-content-overlay">
               <p class="badge badge-lime badge-coming-soon">Coming Soon</p>
               <h3>Rhinoplasty</h3>
-              <p>ENT-qualified surgeons. Ultrasonic techniques. Beautiful, natural results<br>with minimal downtime.</p>
+              <p>ENT-qualified surgeons. Ultrasonic techniques. Beautiful, natural results with minimal downtime.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PRICING / VALUE SECTION: "World-class care. Without the London price tag." -->
+    <!-- VALUE SECTION -->
     <section class="section section-contrast" id="value">
       <div class="container value-inner">
-        <!-- Heading at top center -->
         <div class="value-header">
           <h2>World-class care.<br />Without the London price tag.</h2>
         </div>
 
-        <!-- VALUE HERO IMAGE: Large portrait/square image below heading -->
-        <!-- Current: 62a4c09b263eb1caff9763557dc7b19cbb4b0bf2.jpg -->
-        <!-- Suggested content: Happy patient or confident person post-treatment (500x600px optimal) -->
         <div class="value-image">
-          <img src="62a4c09b263eb1caff9763557dc7b19cbb4b0bf2.jpg" alt="Person smiling confidently" />
+          <img src="62a4c09b263eb1caff9763557dc7b19cbb4b0bf2.jpg" alt="Confident patient" />
         </div>
 
-        <!-- Comparison cards below image -->
         <div class="price-compare">
           <div class="price-column price-column-uk">
             <h3>UK Clinic</h3>
@@ -302,7 +241,7 @@
       </div>
     </section>
 
-    <!-- FAQS -->
+    <!-- FAQ -->
     <section class="section" id="faqs">
       <div class="container faqs-container">
         <div class="faq-header">
@@ -314,49 +253,36 @@
           <details class="faq-item">
             <summary>Is Buji a Clinic?</summary>
             <div class="faq-body">
-              <p>
-                Nope. We're your concierge. We work with the best clinics and only show you options we've personally vetted.
-              </p>
+              <p>Nope. We're your concierge. We work with the best clinics and only show you vetted options.</p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary>Who checks if I'm eligible?</summary>
             <div class="faq-body">
-              <p>
-                Our network of UK registered and domicilied G.Ps and Tricologists checks and signs off on your eligibility.
-              </p>
+              <p>Our UK registered GPs and trichologists assess and sign off your eligibility.</p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary>How long do I need to travel for?</summary>
             <div class="faq-body">
-              <p>
-                We create a 4 day package - 2 days of travel with 2 days of treatment and follow-up in between.
-              </p>
+              <p>We create a 4-day package: 2 days travel with 2 days of treatment and follow-up.</p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary>What happens if something goes wrong?</summary>
             <div class="faq-body">
-              <p>
-                BujiCover is applied to all purchases, meaning we attempt to rectify any procedures at U.K clinics (at our expense). Alternatively, offer a full reimbursement of the procedure cost.
-              </p>
+              <p>BujiCover applies to all purchases, covering UK-based corrections or a full reimbursement.</p>
             </div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- FINAL CTA SECTION: Full-width banner with background image -->
-    <!-- "We're reimagining global healthcare access starting with elective care." -->
+    <!-- FINAL CTA SECTION -->
     <section class="section section-app" id="contact">
-      <!-- CTA BACKGROUND IMAGE: Full-width background image for final section -->
-      <!-- Current: fc37e4bfc0fa5dd1b2d376e2aad220c6eac5d3f6.png -->
-      <!-- Suggested content: Atmospheric image - person with phone, medical/travel theme (1920x500px optimal) -->
-      <!-- Note: Image will be slightly transparent (30% opacity) with dark green overlay -->
       <div class="app-background">
         <img src="fc37e4bfc0fa5dd1b2d376e2aad220c6eac5d3f6.png" alt="Background" />
       </div>
@@ -410,12 +336,11 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
-      
-      // Simple carousel auto-scroll
+
       const track = document.getElementById('carouselTrack');
       let scrollAmount = 0;
       const scrollSpeed = 0.5;
-      
+
       function autoScroll() {
         scrollAmount += scrollSpeed;
         if (scrollAmount >= track.scrollWidth / 2) {
@@ -424,11 +349,10 @@
         track.style.transform = `translateX(-${scrollAmount}px)`;
         requestAnimationFrame(autoScroll);
       }
-      
-      // Duplicate cards for infinite scroll effect
+
       const cards = track.innerHTML;
       track.innerHTML += cards;
-      
+
       autoScroll();
     </script>
   </footer>
