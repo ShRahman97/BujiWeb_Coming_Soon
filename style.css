@@ -343,6 +343,9 @@ body {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 20px;
+  background: #e8f0e6;
+  padding: 32px;
+  border-radius: var(--radius-lg);
 }
 
 .treatment-card {
@@ -439,6 +442,11 @@ body {
   color: var(--text);
 }
 
+.treatment-content-overlay .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
 .treatment-card h3 {
   margin: 0 0 12px;
   font-size: 22px;
@@ -454,14 +462,25 @@ body {
 
 .treatment-list {
   margin: 0 0 24px;
-  padding-left: 20px;
-  color: var(--muted);
+  padding-left: 0;
+  list-style: none;
+  color: var(--text);
   font-size: 14px;
   line-height: 1.8;
 }
 
 .treatment-list li {
   margin-bottom: 8px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.treatment-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
 }
 
 .badge {
@@ -469,8 +488,8 @@ body {
   padding: 6px 12px;
   font-size: 11px;
   border-radius: 6px;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--accent);
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 12px;
@@ -502,10 +521,28 @@ body {
 /* ---- Value / pricing ---- */
 
 .value-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 40px;
+}
+
+.value-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.value-header h2 {
+  font-size: 38px;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.value-image {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .value-image img {
@@ -517,34 +554,40 @@ body {
   box-shadow: var(--shadow-soft);
 }
 
-.value-copy h2 {
-  font-size: 38px;
-  margin: 0 0 32px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
 .price-compare {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .price-column {
-  padding: 24px;
+  padding: 28px;
   border-radius: 20px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.9);
+  background: #f5f5f5;
   font-size: 14px;
 }
 
+.price-column-uk {
+  background: #f5f5f5;
+  color: var(--text);
+}
+
 .price-column h3 {
-  margin: 0 0 16px;
-  font-size: 13px;
+  margin: 0 0 20px;
+  font-size: 16px;
+  text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted);
+  letter-spacing: 0.08em;
+  color: var(--text);
   font-weight: 600;
+}
+
+.price-column-uk h3 {
+  color: var(--text);
 }
 
 .price-column ul {
@@ -552,25 +595,42 @@ body {
   padding-left: 0;
   list-style: none;
   color: var(--text);
-  line-height: 1.8;
+  line-height: 2;
 }
 
 .price-column li {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.price-column li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .price-column-highlight {
-  background: #1a1a1a;
-  color: #e5e7eb;
+  background: var(--accent);
+  color: #ffffff;
   border-color: transparent;
 }
 
 .price-column-highlight h3 {
-  color: #9ca3af;
+  color: #ffffff;
 }
 
 .price-column-highlight ul {
   color: #ffffff;
+}
+
+.price-column-highlight li {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.buji-logo {
+  font-size: 18px;
+  margin-right: 4px;
 }
 
 /* ---- FAQ ---- */
@@ -798,7 +858,6 @@ body {
 
   .planning-inner,
   .treatments-grid,
-  .value-inner,
   .faqs-container,
   .footer-main {
     grid-template-columns: 1fr;
@@ -808,12 +867,8 @@ body {
     grid-row: auto;
   }
 
-  .value-inner {
+  .price-compare {
     grid-template-columns: 1fr;
-  }
-
-  .value-image {
-    order: 2;
   }
 }
 
