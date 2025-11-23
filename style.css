@@ -238,11 +238,54 @@ body {
   max-width: 500px;
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(26, 86, 50, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(26, 86, 50, 0.3);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
 .hero-subtitle {
   margin: 0 0 16px;
   font-size: 16px;
   color: var(--muted);
   max-width: 560px;
+}
+
+.hero-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: grid;
+  gap: 10px;
+  max-width: 560px;
+}
+
+.hero-points li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+.hero-points li::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a5632, #3a7f52);
+  box-shadow: 0 0 0 4px rgba(26, 86, 50, 0.12);
 }
 
 .hero-actions {
@@ -358,8 +401,8 @@ body {
 
 /* BASE CARD — Patient 1 & Patient 3 */
 .carousel-card {
-  flex: 0 0 320px;  /* wider */
-  height: 380px;    /* uniform height */
+  flex: 0 0 320px;             /* wider shape */
+  height: 380px;               /* uniform height for ALL images */
   background: var(--card);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -367,9 +410,10 @@ body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* NARROWER CARDS — Patient 2 & Patient 4 */
+/* VERTICAL CARDS — Patient 2 & Patient 4 */
 .carousel-card-vertical {
-  flex: 0 0 260px;
+  flex: 0 0 260px;             /* narrower shape */
+  /* height inherited from .carousel-card */
 }
 
 .carousel-card img {
@@ -391,7 +435,7 @@ body {
   font-weight: 500;
 }
 
-/* ---- Planning Section ---- */
+/* ---- Planning section ---- */
 
 .planning-inner {
   display: grid;
@@ -428,6 +472,10 @@ body {
   height: 80px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+.feature-card-content {
+  flex: 1;
 }
 
 .feature-eyebrow {
@@ -468,9 +516,7 @@ body {
 }
 
 .treatment-card-with-overlay {
-  position: relative;
-  overflow: hidden;
-  padding: 0;
+  background: #e8f0e6;
 }
 
 .treatment-card-main {
@@ -483,6 +529,12 @@ body {
 .treatment-card-main.treatment-card-with-overlay {
   min-height: 500px;
   position: relative;
+}
+
+.treatment-card-with-overlay {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
 }
 
 .treatment-image {
@@ -498,7 +550,10 @@ body {
   height: 100%;
   border-radius: var(--radius-lg);
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .treatment-card-main.treatment-card-with-overlay .treatment-image {
@@ -509,6 +564,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .treatment-image-cropped img {
@@ -519,14 +575,19 @@ body {
   object-position: 90% center !important;
 }
 
+.treatment-content {
+  flex: 1;
+}
+
 .treatment-content-overlay {
   position: relative;
   z-index: 2;
   padding: 32px;
+  background: transparent;/*linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 60%, transparent 100%);*/
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background: transparent;
+  justify-content: flex-start;
 }
 
 .treatment-card-main .treatment-content-overlay {
@@ -545,10 +606,33 @@ body {
   color: var(--muted);
 }
 
+.treatment-content-overlay .link-arrow {
+  color: var(--text);
+}
+
+.treatment-content-overlay .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.treatment-card h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.treatment-card p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .treatment-list {
   margin: 0 0 24px;
   padding-left: 0;
   list-style: none;
+  color: var(--text);
   font-size: 14px;
   line-height: 1.8;
 }
@@ -571,11 +655,11 @@ body {
   background-position: center;
 }
 
-/* ---- Badge ---- */
-
+/* Base pill */
 .badge {
   display: inline-flex;
-  padding: 4px 10px;
+  width: fit-content;
+  padding: 4px 10px;      /* small, tight pill */
   font-size: 10px;
   font-weight: 600;
   border-radius: 999px;
@@ -584,25 +668,54 @@ body {
   white-space: nowrap;
 }
 
+/* Lime pill (for "Now available") */
 .badge-lime {
   background: #CBE898;
   color: #1a5632;
 }
 
+/* "Coming Soon" – lime text, no pill background */
 .badge-coming-soon {
   background: transparent;
-  color: #CBE898;
+  color: #CBE898;   /* lime green text */
   padding: 0;
   border-radius: 0;
 }
 
-/* ---- Value / Pricing ---- */
+.link-arrow {
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link-arrow:hover {
+  text-decoration: underline;
+}
+
+.treatment-card-secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.treatment-card-secondary.treatment-card-with-overlay {
+  min-height: 280px;
+  position: relative;
+}
+
+/* ---- Value / pricing ---- */
 
 .value-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
+}
+
+.value-header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .value-header h2 {
@@ -612,9 +725,18 @@ body {
   line-height: 1.2;
 }
 
+.value-image {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .value-image img {
   width: 100%;
+  height: auto;
   border-radius: 32px;
+  object-fit: cover;
+  display: block;
   box-shadow: var(--shadow-soft);
 }
 
@@ -624,6 +746,119 @@ body {
   gap: 20px;
   width: 100%;
   max-width: 900px;
+  margin: 0 auto;
+}
+
+.price-column {
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: #f5f5f5;
+  font-size: 14px;
+}
+
+.price-column-uk {
+  background: #f5f5f5;
+  color: var(--text);
+}
+
+.price-column h3 {
+  margin: 0 0 20px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.price-column-uk h3 {
+  color: var(--text);
+}
+
+.price-column ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.price-column li {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.price-column li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.price-column-highlight {
+  background: #324037;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.price-column-highlight h3 {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.price-column-highlight ul {
+  color: #ffffff;
+}
+
+.price-column-highlight li {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.buji-logo {
+  font-size: 18px;
+  margin-right: 4px;
+}
+
+.buji-logo-img {
+  height: 20px;
+  width: auto;
+  display: inline-block;
+}
+
+.price-list-uk li,
+.price-list-buji li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.check-icon,
+.cross-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.check-icon {
+  background-image: url('check_circle_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24 1.png');
+}
+
+.cross-icon {
+  background-image: url('cancel_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24 1.png');
 }
 
 /* ---- FAQ ---- */
@@ -632,12 +867,20 @@ body {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: 60px;
+  align-items: start;
 }
 
 .faq-header h2 {
   font-size: 40px;
   margin: 0 0 24px;
   font-weight: 600;
+  line-height: 1.2;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .faq-item {
@@ -684,7 +927,11 @@ body {
   line-height: 1.6;
 }
 
-/* ---- CTA App Section ---- */
+.faq-body p {
+  margin: 0;
+}
+
+/* ---- App / CTA ---- */
 
 .section-app {
   background: #1a3e2e;
@@ -698,7 +945,10 @@ body {
 
 .app-background {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   opacity: 0.3;
 }
 
@@ -716,9 +966,15 @@ body {
   justify-content: space-between;
 }
 
+.app-copy {
+  max-width: 600px;
+}
+
 .app-copy h2 {
   font-size: 36px;
   margin: 0 0 24px;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 /* ---- Footer ---- */
@@ -738,6 +994,30 @@ body {
   border-bottom: 1px solid #2d2d2d;
 }
 
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.footer-logo .logo-mark {
+  color: #e5e7eb;
+  font-size: 20px;
+}
+
+.footer-logo .logo-text {
+  color: #e5e7eb;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer-copy {
+  margin: 0;
+  max-width: 320px;
+  line-height: 1.6;
+}
+
 .footer-column h4 {
   margin: 0 0 12px;
   color: #e5e7eb;
@@ -745,6 +1025,25 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.footer-column ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #e5e7eb;
 }
 
 .footer-bottom {
@@ -755,7 +1054,25 @@ body {
   padding-top: 24px;
 }
 
-/* ---- Responsive Tweaks ---- */
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Responsive tweaks ---- */
 
 @media (max-width: 1024px) {
   .hero-inner {
@@ -768,11 +1085,32 @@ body {
     justify-content: flex-start;
   }
 
+  .hero-actions {
+    margin-left: 0;
+  }
+
   .planning-inner,
   .treatments-grid,
   .faqs-container,
   .footer-main {
     grid-template-columns: 1fr;
+  }
+
+  .treatment-card-main {
+    grid-row: auto;
+  }
+
+  .price-compare {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header-split {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .section-header-split p {
+    max-width: 100%;
   }
 }
 
@@ -797,12 +1135,12 @@ body {
 
   /* Carousel mobile sizing */
   .carousel-card {
-    flex: 0 0 220px;  /* wider */
-    height: 320px;
+    flex: 0 0 220px;        /* wider (1 & 3) */
+    height: 320px;          /* same height for all */
   }
 
   .carousel-card-vertical {
-    flex: 0 0 190px; /* narrower */
+    flex: 0 0 190px;        /* narrower (2 & 4) */
   }
 }
 
