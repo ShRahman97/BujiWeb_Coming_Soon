@@ -496,7 +496,7 @@ body {
 }
 
 .badge {
-  display: inline-flex;
+  display: inline-block;
   padding: 4px 10px;
   font-size: 10px;
   border-radius: 999px;
@@ -506,14 +506,17 @@ body {
   letter-spacing: 0.1em;
   margin-bottom: 12px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .badge-lime {
   background: #CBE898;
   color: #1a5632;
-  padding: 3px 8px;
+  padding: 4px 10px;
   font-size: 9px;
   font-weight: 600;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .link-arrow {
