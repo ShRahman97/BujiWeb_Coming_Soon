@@ -432,7 +432,7 @@ body {
 }
 
 .treatment-image-dental img {
-  object-position: 55% right center;
+  object-position: 90% center !important;
 }
 
 .treatment-content {
